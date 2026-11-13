@@ -1,5 +1,8 @@
 import express from 'express';
 import jaratok from './routes/jaratok.js'
+import repuloterek from './routes/repuloterek.js'
+import legitarsasagok from './routes/legitarsasagok.js'
+import utvonal from './routes/utvonal.js'
 
 const app = express();
 const port = 3000;
@@ -7,6 +10,9 @@ const port = 3000;
 app.use(express.json());
 
 app.use('/jaratok', jaratok);
+app.use('/repuloterek', repuloterek)
+app.use('/legitarsasagok', legitarsasagok)
+app.use('/utvonal',utvonal)
 
 
 app.listen(port, () => {
